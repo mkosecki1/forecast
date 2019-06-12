@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory
+        android:title="Lokalizacja"
+        app:iconSpaceReserved="false">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:disableDependentsState="true"
+            android:key="USE_DEVICE_LOCATION"
+            android:summary="Wyraź zgodę na użycie lokalizacji telefonu"
+            android:title="Użyj lokalizacji telefonu" />
+
+        <EditTextPreference
+            android:defaultValue="Swidnica"
+            android:dependency="USE_DEVICE_LOCATION"
+            android:key="CUSTOM_LOCATION"
+            android:summary="Miejscowość, dla kotrej wyświetlana jest pogoda"
+            android:title="Miejscowość" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Jednostki">
+        <ListPreference
+            android:defaultValue="METRIC"
+            android:entries="@array/unitSystemEntries"
+            android:entryValues="@array/unitSystemValues"
+            android:key="UNIT_SYSTEM"
+            android:summary="%s"
+            android:title="Układ jednostek" />
+    </PreferenceCategory>
+</PreferenceScreen>

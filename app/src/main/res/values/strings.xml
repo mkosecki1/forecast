@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Pogoda</string>
+    <string name="text_loading">Loading</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
